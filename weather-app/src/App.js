@@ -101,8 +101,7 @@ function WeatherApp() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // WAŻNE: Zastąp 'YOUR_API_KEY' swoim rzeczywistym kluczem z OpenWeatherMap
-  const apiKey = "d4edf7b754a00b4b5057ddbc7dba6b05";
+  const apiKey = process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
 
   const getWeather = async () => {
     if (!city.trim()) {
